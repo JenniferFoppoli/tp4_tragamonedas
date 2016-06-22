@@ -18,6 +18,12 @@ public class testTragamonedas {
 		assertEquals(tragamonedas.tambor1.getPosicion(), tragamonedas.tambor3.getPosicion() , 0.01);
 	}			
 
+	@Test
+	public void UnNumeroAleatorioEntreUnoYDiez() {
+		RandoNumberGenerator numAleatorio = new RandoNumberGenerator();
+		Integer numeroAleatorio = numAleatorio.generate();
+		assertTrue(numeroAleatorio >0 && numeroAleatorio <= 10);
+	}
 
 	
 		@Test
@@ -26,18 +32,26 @@ public class testTragamonedas {
 			Tragamonedas tragamonedas = new Tragamonedas();
 			
 			tragamonedas.activar();
+				
+			assertTrue(tragamonedas.entregarPremio());
 			
-			System.out.println(tragamonedas.tambor1.getPosicion() + " // " + tragamonedas.tambor2.getPosicion() + " // " + tragamonedas.tambor3.getPosicion());
-			
-			if(tragamonedas.entregarPremio() == true){
+				//assertTrue(tragamonedas.tambor1.getPosicion() + " // " + tragamonedas.tambor2.getPosicion() + " // " + tragamonedas.tambor3.getPosicion());
+		
+			/*if(tragamonedas.entregarPremio() == true){
 				System.out.println("Has ganado!!");
 			} else {
 				
 				System.out.println("Sigue intentando");
 				
-			}
+			}*/
 		}
+	
+	
+	
+		
 		
 	}
+		
+	
 
 
